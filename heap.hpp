@@ -6,6 +6,7 @@
 #define HEAP_HEAP_HPP
 
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -14,29 +15,29 @@ class heap {
 
 private:
     void heapify() {
-
+        make_heap(data.begin(), data.end());
     }
 
 public:
     vector<T> data;
 
-    heap(STL stl) {
-//        copy(stl.begin(), stl.end(), data.begin());
-        for (T item: stl) {
-            this->data.push_back(item);
-        }
+    heap(STL& stl) {
+        data = {stl.begin(), stl.end()};
+        heapify();
     }
 
     void push(T element) {
-
+        data.push_back(element);
+        heapify();
     }
 
     T pop() {
-
+        data.erase(data.begin());
+        heapify();
     }
 
     int size() {
-
+        return data.size();
     }
 
     bool is_empty() {
@@ -44,10 +45,12 @@ public:
     }
 
     void clear() {
-
+        data.clear();
     }
 
-
+    static heap<STL, T> get_instance(STL stl) {
+        return heap{stl};
+    }
 
 };
 
