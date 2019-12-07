@@ -32,8 +32,10 @@ public:
     }
 
     T pop() {
+        T head = *data.begin();
         data.erase(data.begin());
         heapify();
+        return head;
     }
 
     int size() {

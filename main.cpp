@@ -18,6 +18,7 @@ int main() {
     cout << "Testing adding 666 to singleton" << endl;
     my_singleton.push(666);
     cout << my_singleton << endl;
+    cout << endl;
 
     int popped = my_singleton.pop();
     cout << "Testing pop from singleton: " << endl;
@@ -27,14 +28,14 @@ int main() {
 
     cout << "Is singleton empty?" << endl;
     string empty;
-    my_singleton.is_empty() ? empty = "yeeeeee" : empty = "nooppppppe";
+    my_singleton.is_empty() ? empty = "yeeeee" : empty = "naaaaaa";
     cout << empty << endl;
 
 
     cout << "Clearing singleton" << endl;
     my_singleton.clear();
     cout << "Is singleton empty now?" << endl;
-    my_singleton.is_empty() ? empty = "mhm" : empty = "NooOOOoOOooOOoOooOoo";
+    my_singleton.is_empty() ? empty = "yeeeee" : empty = "naaaaaa";
     cout << empty << endl;
 
     return 0;
