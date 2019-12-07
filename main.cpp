@@ -26,12 +26,16 @@ int main() {
     cout << endl;
 
     cout << "Is singleton empty?" << endl;
-    cout << my_singleton.is_empty() << endl;
+    string empty;
+    my_singleton.is_empty() ? empty = "yeeeeee" : empty = "nooppppppe";
+    cout << empty << endl;
+
 
     cout << "Clearing singleton" << endl;
     my_singleton.clear();
     cout << "Is singleton empty now?" << endl;
-    cout << my_singleton.is_empty() << endl;
+    my_singleton.is_empty() ? empty = "mhm" : empty = "NooOOOoOOooOOoOooOoo";
+    cout << empty << endl;
 
     return 0;
 }
